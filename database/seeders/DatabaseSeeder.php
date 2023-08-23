@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         Roles::truncate();
         User::truncate();
 
-        $default_roles = ["admin","faculty","student","secretary","department_head"];
+        $default_roles = ["admin","faculty","student","secretary","department_head", "undefined"];
 
         foreach($default_roles as $role){
             Roles::factory()->create([

@@ -5,12 +5,12 @@
         <!-- Name -->
         <div>
             <x-input-label for="lname" :value="__('Lastame')" />
-            <x-text-input id="lname" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+            <x-text-input id="lname" class="block mt-1 w-full" type="text" name="lname" :value="old('lname')" required autofocus autocomplete="name" />
             <x-input-error :messages="$errors->get('lname')" class="mt-2" />
         </div>
         <div>
             <x-input-label for="oname" :value="__('Othername(s)')" />
-            <x-text-input id="oname" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+            <x-text-input id="oname" class="block mt-1 w-full" type="text" name="oname" :value="old('oname')" required autofocus autocomplete="name" />
             <x-input-error :messages="$errors->get('oname')" class="mt-2" />
         </div>
 
@@ -24,7 +24,7 @@
         <!-- Username -->
         <div>
             <x-input-label for="username" :value="__('Username')" />
-            <x-text-input id="username" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+            <x-text-input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required autofocus autocomplete="name" />
             <x-input-error :messages="$errors->get('username')" class="mt-2" />
         </div>
 
