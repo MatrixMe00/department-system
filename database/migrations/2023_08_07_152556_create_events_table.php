@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string("title");
             $table->mediumText("description");
+            $table->enum("type",["department", "faculty", "both"]);
+            $table->integer("department_id")->nullable();
+            $table->foreignId("faculty_id");
             $table->date("event_date");
             $table->string("location");
             $table->timestamps();

@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Announcements extends Model
 {
     use HasFactory;
+
+    //creating relationships
+    public function department(){
+        return $this->belongsTo(Department::class);
+    }
 }

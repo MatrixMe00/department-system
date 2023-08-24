@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('research_projects', function (Blueprint $table) {
             $table->id();
-            $table->string("totle");
+            $table->string("title");
             $table->mediumText("description");
             $table->foreignId("faculty_id");
+            $table->foreignId("department_id");
             $table->boolean("status")->default(FALSE);
             $table->date("start_date");
             $table->date("end_date");

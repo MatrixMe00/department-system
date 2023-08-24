@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId("user_id");
             $table->string("student_id", 10);
+            $table->foreignId("program_id");
             $table->timestamp("enrolment_date");
             $table->timestamps();
         });

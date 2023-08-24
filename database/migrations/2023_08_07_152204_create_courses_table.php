@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string("title");
             $table->mediumText("description");
             $table->foreignId("department_id");
-            $table->foreignId("faculty_id");
             $table->timestamps();
         });
     }
