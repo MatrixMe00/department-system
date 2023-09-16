@@ -18,14 +18,36 @@
         @method('patch')
 
         <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
-            <x-input-error class="mt-2" :messages="$errors->get('name')" />
+            <x-input-label for="lname" :value="__('Lastname')" />
+            <x-text-input id="lname" name="lname" type="text" class="mt-1 block w-full" :value="old('lname', $user->lname)" required autofocus autocomplete="lname" />
+            <x-input-error class="mt-2" :messages="$errors->get('lname')" />
+        </div>
+
+        <div>
+            <x-input-label for="oname" :value="__('Othername(s)')" />
+            <x-text-input id="oname" name="oname" type="text" class="mt-1 block w-full" :value="old('oname', $user->oname)" required autocomplete="oname" />
+            <x-input-error class="mt-2" :messages="$errors->get('oname')" />
+        </div>
+
+        <div>
+            <x-input-label for="username" :value="__('Username')" />
+            <x-text-input id="username" name="username" type="text" class="mt-1 block w-full" :value="old('username', $user->username)" required autocomplete="username" />
+            <x-input-error class="mt-2" :messages="$errors->get('username')" />
+        </div>
+
+        <div>
+            <x-input-label for="name" :value="__('User Role')" />
+            <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('role', $user->role->name)" required disabled />
+        </div>
+
+        <div>
+            <x-text-input id="role_id" name="role_id" type="hidden" class="mt-1 block w-full" :value="old('role_id', $user->role->id)" />
+            <x-input-error class="mt-2" :messages="$errors->get('role_id')" />
         </div>
 
         <div>
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="username" />
+            <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="email" />
             <x-input-error class="mt-2" :messages="$errors->get('email')" />
 
             @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
